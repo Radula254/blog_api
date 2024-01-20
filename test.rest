@@ -1,0 +1,61 @@
+###Saving a post
+POST http://localhost:3000/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc29uQGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzA1NzY2NDUyfQ.ltZq2yz8XIzPI2kR25cj-YrAaTBNumLXScl2CiRLax0
+
+{
+    "title": "Testing page 5",
+    "content": "Test contenting",
+    "image_url": "1705764152228.png",
+    "category_id": 2
+}
+
+###Get a single post
+GET http://localhost:3000/posts/3
+
+###Get all posts
+GET http://localhost:3000/posts
+
+###Update post by id
+PATCH http://localhost:3000/posts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc29uQGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzA1NzY2NDUyfQ.ltZq2yz8XIzPI2kR25cj-YrAaTBNumLXScl2CiRLax0
+
+{
+    "title": "Test title updated",
+    "content": "Test content2 updated",
+    "image_url": "1705764152228.png",
+    "category_id": 9
+}
+
+###Delete a post by id
+DELETE http://localhost:3000/posts/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imphc29uQGdtYWlsLmNvbSIsInVzZXJJZCI6MSwiaWF0IjoxNzA1NzUzMjE2fQ.wkUV5K4kXu7h9wodThnJPpaM58BcwjgJVBcLEErEZLg
+
+###Create a new user
+POST http://localhost:3000/user/sign-up
+Content-Type: application/json
+
+{
+    "name": "Jason Test",
+    "email": "jason@gmail.com",
+    "password": "Test123"
+}
+
+###User login using email and password
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "jason@gmail.com",
+    "password": "Test123"
+}
+
+###Get image
+GET http://localhost:3000/uploads/1705764152228.png
+
+
+
+
+
+
